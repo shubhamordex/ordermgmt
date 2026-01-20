@@ -22,6 +22,10 @@ public class Customer {
     @JsonManagedReference
     private List<Order> orders;
 
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<Address> addresses;
+
     // Default constructor (required by JPA)
     public Customer() {
     }
@@ -59,4 +63,12 @@ public class Customer {
     public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
+    public List<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(List<Address> addresses) {
+        this.addresses = addresses;
+    }
+
 }

@@ -7,5 +7,4 @@ import com.example.ordermgmt.entity.Order;
 
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
-    // No extra methods needed for basic CRUD
 }
